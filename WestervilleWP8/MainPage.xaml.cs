@@ -118,28 +118,15 @@ namespace WestervilleWP8
             foreach(School s in Schools)
             {
                 MapOverlay overlay = new MapOverlay();
-                overlay.Content = BuildImage(s);
-                overlay.PositionOrigin = new Point(0.5, 0.5);
+                overlay.Content = s.GetPushpin();
+                //overlay.PositionOrigin = new Point(0.5, 0.5);
+                overlay.PositionOrigin = new Point(0, 0);
                 overlay.GeoCoordinate = s.Location;
 
                 layerEducation.Add(overlay);
             }
 
             TheMap.Layers.Add(layerEducation);
-        }
-
-        private Image BuildImage(School school)
-        {
-            Image image = new Image();
-            image.Name = school.Name;
-            image.Width = 90;
-            image.Height = 50;
-            image.Tap += School_Tap;
-            image.DataContext = school;
-            Uri uri = new Uri(school.ImageName, UriKind.Relative);
-            ImageSource imageSource = new BitmapImage(uri);
-            image.Source = imageSource;
-            return image;
         }
 
         private void School_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -149,6 +136,14 @@ namespace WestervilleWP8
             WebBrowserTask wbt = new WebBrowserTask();
             wbt.Uri = s.WebAddress;
             wbt.Show();
+        }
+
+        private void MapMode_Click(object sender, EventArgs e)
+        {
+            if (TheMap.CartographicMode == MapCartographicMode.Aerial) TheMap.CartographicMode = MapCartographicMode.Hybrid;
+            else if (TheMap.CartographicMode == MapCartographicMode.Hybrid) TheMap.CartographicMode = MapCartographicMode.Road;
+            else if (TheMap.CartographicMode == MapCartographicMode.Road) TheMap.CartographicMode = MapCartographicMode.Terrain;
+            else if (TheMap.CartographicMode == MapCartographicMode.Terrain) TheMap.CartographicMode = MapCartographicMode.Aerial;
         }
 
 

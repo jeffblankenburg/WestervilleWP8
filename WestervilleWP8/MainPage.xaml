@@ -16,14 +16,19 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Controls:Map x:Name="TheMap" Center="40.123611, -82.921389" ZoomLevel="13" LandmarksEnabled="True" PedestrianFeaturesEnabled="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:Map x:Name="TheMap" Center="40.123611, -82.921389" ZoomLevel="{Binding ElementName=ZoomSlider, Path=Value, Mode=TwoWay}" LandmarksEnabled="True" PedestrianFeaturesEnabled="True">
             
         </Controls:Map>
+        <Slider x:Name="ZoomSlider" Grid.Row="1" Minimum="1" Maximum="20" SmallChange="1" Value="13" />
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="map mode"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="filter"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="map mode" Click="MapMode_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="filter"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="about"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="about"/>
             <shell:ApplicationBar.MenuItems>

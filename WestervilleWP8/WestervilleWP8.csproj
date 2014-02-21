@@ -131,27 +131,7 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Schools\ele_alcott.jpg" />
-    <Content Include="Assets\Schools\ele_annehurst.jpg" />
-    <Content Include="Assets\Schools\ele_cherrington.jpg" />
-    <Content Include="Assets\Schools\ele_emerson.jpg" />
-    <Content Include="Assets\Schools\ele_fouse.jpg" />
-    <Content Include="Assets\Schools\ele_hanby.jpg" />
-    <Content Include="Assets\Schools\ele_hawthorne.jpg" />
-    <Content Include="Assets\Schools\ele_huberridge.jpg" />
-    <Content Include="Assets\Schools\ele_marktwain.jpg" />
-    <Content Include="Assets\Schools\ele_mcvay.jpg" />
-    <Content Include="Assets\Schools\ele_pointview.jpg" />
-    <Content Include="Assets\Schools\ele_robertfrost.jpg" />
-    <Content Include="Assets\Schools\ele_whittier.jpg" />
-    <Content Include="Assets\Schools\ele_wilder.jpg" />
-    <Content Include="Assets\Schools\hs_central.jpg" />
-    <Content Include="Assets\Schools\hs_north.jpg" />
-    <Content Include="Assets\Schools\hs_south.jpg" />
-    <Content Include="Assets\Schools\ms_blendon.jpg" />
-    <Content Include="Assets\Schools\ms_genoa.jpg" />
-    <Content Include="Assets\Schools\ms_heritage.jpg" />
-    <Content Include="Assets\Schools\ms_walnutsprings.jpg" />
+    <Content Include="Assets\Schools\wcsoh.JPG" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
