@@ -21,8 +21,34 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Controls:Map x:Name="TheMap" Center="40.123611, -82.921389" ZoomLevel="{Binding ElementName=ZoomSlider, Path=Value, Mode=TwoWay}" LandmarksEnabled="True" PedestrianFeaturesEnabled="True">
-            
+
         </Controls:Map>
+        <StackPanel HorizontalAlignment="Left" Margin="-20,0,0,0">
+            <Grid>
+                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+                <Image Source="Assets/Icons/school.png" Width="30" Margin="18,10,17,10" />
+                <TextBlock Text="education" FontSize="11" TextAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="18,24,-24,24" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-90"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+            <Grid Margin="0,-3,0,0">
+                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+                <Image Source="Assets/Icons/school.png" Width="30" Margin="18,10,17,10" />
+                <TextBlock Text="recreation" FontSize="11" TextAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="18,24,-24,24" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-90"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+            <Grid Margin="0,-3,0,0">
+                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+            </Grid>
+            <Grid Margin="0,-3,0,0">
+                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+            </Grid>
+        </StackPanel>
         <Slider x:Name="ZoomSlider" Grid.Row="1" Minimum="1" Maximum="20" SmallChange="1" Value="13" />
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
