@@ -1,5 +1,4 @@
-﻿using Microsoft.Phone.Tasks;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Linq;
@@ -9,16 +8,15 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WestervilleWP8
 {
-    public class School : POI
+    public class RecreationItem : POI
     {
         public override Grid GetPushpin()
         {
             Grid g = new Grid();
-            RowDefinition rd = new RowDefinition { Height=new GridLength(75) };
+            RowDefinition rd = new RowDefinition { Height = new GridLength(75) };
             ColumnDefinition cd1 = new ColumnDefinition { Width = new GridLength(50) };
             ColumnDefinition cd2 = new ColumnDefinition { Width = new GridLength(100) };
             g.RowDefinitions.Add(rd);
@@ -29,7 +27,7 @@ namespace WestervilleWP8
             image.Width = 40;
             image.Height = 40;
             g.Tap += Grid_Tap;
-            Uri uri = new Uri("Assets/Icons/school_black.png", UriKind.Relative);
+            Uri uri = new Uri(ImageName, UriKind.Relative);
             ImageSource imageSource = new BitmapImage(uri);
             image.Source = imageSource;
             g.Children.Add(image);
@@ -50,7 +48,5 @@ namespace WestervilleWP8
             g.Children.Add(t);
             return g;
         }
-
-        
     }
 }

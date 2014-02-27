@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using WestervilleWP8.Resources;
+using Microsoft.Phone.Tasks;
 
 namespace WestervilleWP8
 {
@@ -17,6 +18,8 @@ namespace WestervilleWP8
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
+
+        
 
         /// <summary>
         /// Constructor for the Application object.
@@ -39,7 +42,7 @@ namespace WestervilleWP8
             if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
-                Application.Current.Host.Settings.EnableFrameRateCounter = true;
+                //Application.Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;

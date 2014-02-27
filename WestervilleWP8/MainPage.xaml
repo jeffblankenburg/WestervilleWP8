@@ -24,26 +24,32 @@
 
         </Controls:Map>
         <StackPanel HorizontalAlignment="Left" Margin="-20,0,0,0">
-            <Grid>
-                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
-                <Image Source="Assets/Icons/school.png" Width="30" Margin="18,10,17,10" />
+            <Grid x:Name="Education" Tap="Menu_Tap">
+                <Rectangle x:Name="Education_Box" Fill="#33000000" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+                <Image Source="Assets/Icons/school_white.png" Width="30" Margin="18,10,17,10" />
                 <TextBlock Text="education" FontSize="11" TextAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="18,24,-24,24" UseLayoutRounding="False" d:LayoutRounding="Auto" >
                     <TextBlock.RenderTransform>
                         <CompositeTransform Rotation="-90"/>
                     </TextBlock.RenderTransform>
                 </TextBlock>
             </Grid>
-            <Grid Margin="0,-3,0,0">
-                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
-                <Image Source="Assets/Icons/school.png" Width="30" Margin="18,10,17,10" />
+            <Grid x:Name="Recreation" Margin="0,-3,0,0" Tap="Menu_Tap">
+                <Rectangle x:Name="Recreation_Box" Fill="#33000000" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+                <Image Source="Assets/Icons/running_white.png" Width="30" Margin="18,10,17,10" />
                 <TextBlock Text="recreation" FontSize="11" TextAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="18,24,-24,24" UseLayoutRounding="False" d:LayoutRounding="Auto" >
                     <TextBlock.RenderTransform>
                         <CompositeTransform Rotation="-90"/>
                     </TextBlock.RenderTransform>
                 </TextBlock>
             </Grid>
-            <Grid Margin="0,-3,0,0">
-                <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+            <Grid x:Name="Dining" Margin="0,-3,0,0" Tap="Menu_Tap">
+                <Rectangle x:Name="Dining_Box" Fill="#33000000" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
+                <Image Source="Assets/Icons/silverware_white.png" Width="30" Margin="18,10,17,10" />
+                <TextBlock Text="dining" FontSize="11" TextAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="18,24,-24,24" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-90"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
             </Grid>
             <Grid Margin="0,-3,0,0">
                 <Rectangle Fill="#33FFFFFF" Width="75" Height="75" RadiusX="25" RadiusY="25" Stroke="White" StrokeThickness="3" />
@@ -53,14 +59,14 @@
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="map mode" Click="MapMode_Click"/>
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="filter"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/map.png" Text="map mode" Click="MapMode_Click"/>
+            <!--<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="filter"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="about"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/questionmark.png" Text="about"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+            </shell:ApplicationBar.MenuItems>-->
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>
