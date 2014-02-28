@@ -13,7 +13,7 @@ namespace WestervilleWP8
 {
     public class RecreationItem : POI
     {
-        public override Grid GetPushpin()
+        public override Grid GetPushpin(string color, SolidColorBrush brush)
         {
             Grid g = new Grid();
             RowDefinition rd = new RowDefinition { Height = new GridLength(75) };
@@ -27,7 +27,7 @@ namespace WestervilleWP8
             image.Width = 40;
             image.Height = 40;
             g.Tap += Grid_Tap;
-            Uri uri = new Uri(ImageName, UriKind.Relative);
+            Uri uri = new Uri("Assets/Icons/" + ImageName + "_" + color + ".png", UriKind.Relative);
             ImageSource imageSource = new BitmapImage(uri);
             image.Source = imageSource;
             g.Children.Add(image);
@@ -42,7 +42,7 @@ namespace WestervilleWP8
             t.TextWrapping = TextWrapping.Wrap;
             t.VerticalAlignment = VerticalAlignment.Center;
             t.Margin = new Thickness(5);
-            t.Foreground = new SolidColorBrush(Colors.Black);
+            t.Foreground = brush;
             t.FontSize = 14;
             Grid.SetColumn(t, 1);
             g.Children.Add(t);

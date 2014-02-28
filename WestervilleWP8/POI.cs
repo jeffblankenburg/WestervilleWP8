@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace WestervilleWP8
 {
@@ -16,7 +17,7 @@ namespace WestervilleWP8
         public Uri WebAddress { get; set; }
         public string ImageName { get; set; }
 
-        public virtual Grid GetPushpin()
+        public virtual Grid GetPushpin(string color, SolidColorBrush brush)
         {
             return new Grid();
         }

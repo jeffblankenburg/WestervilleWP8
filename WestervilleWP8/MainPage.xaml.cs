@@ -29,6 +29,9 @@ namespace WestervilleWP8
         MapLayer layerEducation = new MapLayer();
         SolidColorBrush highlight = new SolidColorBrush(Color.FromArgb(0xFF, 0xd5, 0x73, 0x28));
         SolidColorBrush original = new SolidColorBrush(Color.FromArgb(0x66, 0x00, 0x00, 0x00));
+        SolidColorBrush overlaybrush = new SolidColorBrush(Colors.Black);
+        string overlaycolor = "black";
+        string CurrentLayer = "Education";
 
         public List<School> Schools = new List<School>();
         public List<RecreationItem> RecreationItems = new List<RecreationItem>();
@@ -87,24 +90,25 @@ namespace WestervilleWP8
         private void LoadRecreation()
         {
             RecreationItems.Clear();
-            RecreationItems.Add(new RecreationItem { Name = "Alum Creek Park North", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=278"), Location = new GeoCoordinate(40.124775, -82.939911), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Alum Creek Park South", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=276"), Location = new GeoCoordinate(40.1131334, -82.936166), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Brooksedge Bark Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=273"), Location = new GeoCoordinate(40.107341, -82.936598), ImageName = "Assets/Icons/dog_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Ernest Cherrington Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=272"), Location = new GeoCoordinate(40.116954, -82.936974), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Hanby Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=268"), Location = new GeoCoordinate(40.123428, -82.92665), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Hannah Mayne Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=266"), Location = new GeoCoordinate(40.120614, -82.93224), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Heritage Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=274"), Location = new GeoCoordinate(40.12699, -82.947249), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Highlands Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=384"), Location = new GeoCoordinate(40.117014, -82.90442), ImageName = "Assets/Icons/swim_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Hoff Woods Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=264"), Location = new GeoCoordinate(40.140221, -82.918625), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Huber Village Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=386"), Location = new GeoCoordinate(40.103959, -82.909613), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Millstone Creek Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=261"), Location = new GeoCoordinate(40.14515, -82.902328), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Olde Town Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=481"), Location = new GeoCoordinate(40.13386, -82.929013), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Paul Metzger Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=387"), Location = new GeoCoordinate(40.129217, -82.960269), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Spring Grove North", WebAddress = new Uri("http://jeffblankenburg.com"), Location = new GeoCoordinate(40.130903, -82.888407), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Towers Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=482"), Location = new GeoCoordinate(40.130739, -82.907344), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Walnut Ridge Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=480"), Location = new GeoCoordinate(40.118634, -82.910954), ImageName = "Assets/Icons/park_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Westerville Community Center", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=246"), Location = new GeoCoordinate(40.135568, -82.945291), ImageName = "Assets/Icons/running_black.png" });
-            RecreationItems.Add(new RecreationItem { Name = "Westerville Sports Complex", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=244"), Location = new GeoCoordinate(40.134049, -82.948682), ImageName = "Assets/Icons/park_black.png" });
+            RecreationItems.Add(new RecreationItem { Name = "Alum Creek Park North", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=278"), Location = new GeoCoordinate(40.124775, -82.939911), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Alum Creek Park South", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=276"), Location = new GeoCoordinate(40.1131334, -82.936166), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Brooksedge Bark Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=273"), Location = new GeoCoordinate(40.107341, -82.936598), ImageName = "dog" });
+            RecreationItems.Add(new RecreationItem { Name = "Ernest Cherrington Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=272"), Location = new GeoCoordinate(40.116954, -82.936974), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Hanby Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=268"), Location = new GeoCoordinate(40.123428, -82.92665), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Hannah Mayne Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=266"), Location = new GeoCoordinate(40.120614, -82.93224), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Heritage Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=274"), Location = new GeoCoordinate(40.12699, -82.947249), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Highlands Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=384"), Location = new GeoCoordinate(40.117014, -82.90442), ImageName = "swim" });
+            RecreationItems.Add(new RecreationItem { Name = "Hoff Woods Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=264"), Location = new GeoCoordinate(40.140221, -82.918625), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Huber Village Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=386"), Location = new GeoCoordinate(40.103959, -82.909613), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Millstone Creek Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=261"), Location = new GeoCoordinate(40.14515, -82.902328), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Olde Town Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=481"), Location = new GeoCoordinate(40.13386, -82.929013), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Paul Metzger Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=387"), Location = new GeoCoordinate(40.129217, -82.960269), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Spring Grove North", WebAddress = new Uri("http://jeffblankenburg.com"), Location = new GeoCoordinate(40.130903, -82.888407), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Towers Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=482"), Location = new GeoCoordinate(40.130739, -82.907344), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Walnut Ridge Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=480"), Location = new GeoCoordinate(40.118634, -82.910954), ImageName = "park" });
+            RecreationItems.Add(new RecreationItem { Name = "Westerville Community Center", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=246"), Location = new GeoCoordinate(40.135568, -82.945291), ImageName = "running" });
+            RecreationItems.Add(new RecreationItem { Name = "Westerville Sports Complex", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=244"), Location = new GeoCoordinate(40.134049, -82.948682), ImageName = "running" });
+            RecreationItems.Add(new RecreationItem { Name = "Astronaut Grove Park", WebAddress = new Uri("http://www.westerville.org/modules/showdocument.aspx?documentid=277"), Location = new GeoCoordinate(40.125877, -82.941279), ImageName = "park" });
         }
 
         private void LoadDining()
@@ -153,7 +157,7 @@ namespace WestervilleWP8
             foreach(School s in Schools)
             {
                 MapOverlay overlay = new MapOverlay();
-                overlay.Content = s.GetPushpin();
+                overlay.Content = s.GetPushpin(overlaycolor, overlaybrush);
                 overlay.PositionOrigin = new Point(0.5, 0.5);
                 //overlay.PositionOrigin = new Point(0, 0);
                 overlay.GeoCoordinate = s.Location;
@@ -173,7 +177,7 @@ namespace WestervilleWP8
             foreach (RecreationItem ri in RecreationItems)
             {
                 MapOverlay overlay = new MapOverlay();
-                overlay.Content = ri.GetPushpin();
+                overlay.Content = ri.GetPushpin(overlaycolor, overlaybrush);
                 overlay.PositionOrigin = new Point(0.5, 0.5);
                 //overlay.PositionOrigin = new Point(0, 0);
                 overlay.GeoCoordinate = ri.Location;
@@ -193,7 +197,7 @@ namespace WestervilleWP8
             foreach (DiningItem di in DiningItems)
             {
                 MapOverlay overlay = new MapOverlay();
-                overlay.Content = di.GetPushpin();
+                overlay.Content = di.GetPushpin(overlaycolor, overlaybrush);
                 overlay.PositionOrigin = new Point(0.5, 0.5);
                 //overlay.PositionOrigin = new Point(0, 0);
                 overlay.GeoCoordinate = di.Location;
@@ -215,30 +219,57 @@ namespace WestervilleWP8
 
         private void MapMode_Click(object sender, EventArgs e)
         {
-            if (TheMap.CartographicMode == MapCartographicMode.Aerial) TheMap.CartographicMode = MapCartographicMode.Hybrid;
-            else if (TheMap.CartographicMode == MapCartographicMode.Hybrid) TheMap.CartographicMode = MapCartographicMode.Road;
-            else if (TheMap.CartographicMode == MapCartographicMode.Road) TheMap.CartographicMode = MapCartographicMode.Terrain;
-            else if (TheMap.CartographicMode == MapCartographicMode.Terrain) TheMap.CartographicMode = MapCartographicMode.Aerial;
+            if (TheMap.CartographicMode == MapCartographicMode.Aerial)
+            {
+                TheMap.CartographicMode = MapCartographicMode.Hybrid;
+                overlaycolor = "white";
+                overlaybrush = new SolidColorBrush(Colors.White);
+            }
+            else if (TheMap.CartographicMode == MapCartographicMode.Hybrid)
+            {
+                TheMap.CartographicMode = MapCartographicMode.Road;
+                overlaycolor = "black";
+                overlaybrush = new SolidColorBrush(Colors.Black);
+            }
+            else if (TheMap.CartographicMode == MapCartographicMode.Road)
+            {
+                TheMap.CartographicMode = MapCartographicMode.Terrain;
+                overlaycolor = "black";
+                overlaybrush = new SolidColorBrush(Colors.Black);
+            }
+            else if (TheMap.CartographicMode == MapCartographicMode.Terrain)
+            {
+                TheMap.CartographicMode = MapCartographicMode.Aerial;
+                overlaycolor = "white";
+                overlaybrush = new SolidColorBrush(Colors.White);
+            }
+
+            ShowLayers();
         }
 
         private void Menu_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             Grid g = sender as Grid;
-            string n = g.Name;
+            CurrentLayer = g.Name;
 
+            ShowLayers();
+        }
+
+        private void ShowLayers()
+        {
             ResetLayers();
 
-            switch(n)
+            switch (CurrentLayer)
             {
                 case "Education":
                     ShowEducation();
-                break;
+                    break;
                 case "Recreation":
                     ShowRecreation();
-                break;
+                    break;
                 case "Dining":
                     ShowDining();
-                break;
+                    break;
             }
         }
 

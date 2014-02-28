@@ -100,12 +100,14 @@
     <Compile Include="Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CalendarItem.cs" />
     <Compile Include="CoordinateConverter.cs" />
     <Compile Include="DiningItem.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="LongTimeToShortTimeConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -177,6 +179,7 @@
     <Content Include="Assets\Icons\silverware_white.png" />
     <Content Include="Assets\Icons\swim_black.png" />
     <Content Include="Assets\Icons\swim_white.png" />
+    <Content Include="Assets\logo.png" />
     <Content Include="Assets\Schools\wcsoh.JPG" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
