@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{8d4a1d09-d872-4267-94c9-d144a21c3e90}" Title="WestervilleWP8" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WestervilleWP8 author" Description="Sample description" Publisher="WestervilleWP8" PublisherID="{389c1851-1798-49c3-b53f-4e80c16e5d95}">
+  <App xmlns="" ProductID="{8d4a1d09-d872-4267-94c9-d144a21c3e90}" Title="Westerville" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Jeff Blankenburg" Description="Sample description" Publisher="Intentionally Blank" PublisherID="{389c1851-1798-49c3-b53f-4e80c16e5d95}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
-      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
       <Capability Name="ID_CAP_SENSORS" />
-      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
       <Capability Name="ID_CAP_MAP" />
       <Capability Name="ID_CAP_LOCATION" />
     </Capabilities>
@@ -18,20 +16,24 @@
     <Tokens>
       <PrimaryToken TokenID="WestervilleWP8Token" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\SmallIcon_159x159.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>WestervilleWP8</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\MediumIcon_336x336.png</BackgroundImageURI>
+          <Title>
+          </Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
           </BackBackgroundImageURI>
           <BackTitle>
           </BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets\LargeIcon_691x336.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">
+          </LargeBackBackgroundImageURI>
           <DeviceLockImageURI>
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>True</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

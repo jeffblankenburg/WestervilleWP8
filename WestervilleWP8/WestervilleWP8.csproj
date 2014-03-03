@@ -91,6 +91,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Attribution.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +175,9 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\AppTitleIcon_300x300.png" />
+    <Content Include="Assets\BackgroundImage_1000x800.jpg" />
+    <Content Include="Assets\BackgroundImage_1000x800.png" />
     <Content Include="Assets\Icons\baseballfield_black.png" />
     <Content Include="Assets\Icons\baseballfield_color.png" />
     <Content Include="Assets\Icons\baseballfield_white.png" />
@@ -184,6 +194,7 @@
     <Content Include="Assets\Icons\park_color.png" />
     <Content Include="Assets\Icons\park_white.png" />
     <Content Include="Assets\Icons\running_black.png" />
+    <Content Include="Assets\Icons\running_color.png" />
     <Content Include="Assets\Icons\running_white.png" />
     <Content Include="Assets\Icons\school_black.png" />
     <Content Include="Assets\Icons\school_color.png" />
@@ -203,7 +214,13 @@
     <Content Include="Assets\Icons\wetland_black.png" />
     <Content Include="Assets\Icons\wetland_color.png" />
     <Content Include="Assets\Icons\wetland_white.png" />
+    <Content Include="Assets\LargeIcon_691x336.jpg" />
+    <Content Include="Assets\LargeIcon_691x336.png" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\MediumIcon_202x202.jpg" />
+    <Content Include="Assets\MediumIcon_202x202.png" />
+    <Content Include="Assets\MediumIcon_336x336.jpg" />
+    <Content Include="Assets\MediumIcon_336x336.png" />
     <Content Include="Assets\Recreation\alumcreekparknorth.jpg" />
     <Content Include="Assets\Recreation\alumcreekparksouth.jpg" />
     <Content Include="Assets\Recreation\astronautgrovepark.jpg" />
@@ -214,10 +231,12 @@
     <Content Include="Assets\Recreation\collegeknollwetlands.jpg" />
     <Content Include="Assets\Recreation\communitytenniscomplex.jpg" />
     <Content Include="Assets\Recreation\electricminipark.jpg" />
+    <Content Include="Assets\Recreation\ernestcherringtonpark.jpg" />
     <Content Include="Assets\Recreation\firstresponderspark.jpg" />
     <Content Include="Assets\Recreation\hanbypark.jpg" />
     <Content Include="Assets\Recreation\hannahmaynepark.jpg" />
     <Content Include="Assets\Recreation\heritagepark.jpg" />
+    <Content Include="Assets\Recreation\heritagewetland.jpg" />
     <Content Include="Assets\Recreation\highlands.jpg" />
     <Content Include="Assets\Recreation\highlandsparkaquaticcenter.jpg" />
     <Content Include="Assets\Recreation\hoffwoodspark.jpg" />
@@ -256,6 +275,10 @@
     <Content Include="Assets\Schools\ms_heritage.jpg" />
     <Content Include="Assets\Schools\ms_walnutsprings.jpg" />
     <Content Include="Assets\Schools\wcsoh.JPG" />
+    <Content Include="Assets\SmallIcon_110x110.jpg" />
+    <Content Include="Assets\SmallIcon_110x110.png" />
+    <Content Include="Assets\SmallIcon_159x159.jpg" />
+    <Content Include="Assets\SmallIcon_159x159.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

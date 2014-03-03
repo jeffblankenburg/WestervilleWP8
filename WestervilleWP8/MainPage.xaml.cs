@@ -135,24 +135,24 @@ namespace WestervilleWP8
 
         private void ShowDining()
         {
-            Dining_Box.Fill = highlight;
-            TheMap.Layers.Remove(layerDining);
-            layerDining = new MapLayer();
+            //Dining_Box.Fill = highlight;
+            //TheMap.Layers.Remove(layerDining);
+            //layerDining = new MapLayer();
 
-            foreach (DiningItem di in App.DiningItems)
-            {
-                MapOverlay overlay = new MapOverlay();
-                Grid g = di.GetPushpin(overlaycolor, overlaybrush);
-                g.Tap += g_Tap;
-                overlay.Content = g;
-                overlay.PositionOrigin = new Point(0, 0.5);
-                //overlay.PositionOrigin = new Point(0, 0);
-                overlay.GeoCoordinate = di.Location;
+            //foreach (DiningItem di in App.DiningItems)
+            //{
+            //    MapOverlay overlay = new MapOverlay();
+            //    Grid g = di.GetPushpin(overlaycolor, overlaybrush);
+            //    g.Tap += g_Tap;
+            //    overlay.Content = g;
+            //    overlay.PositionOrigin = new Point(0, 0.5);
+            //    //overlay.PositionOrigin = new Point(0, 0);
+            //    overlay.GeoCoordinate = di.Location;
 
-                layerDining.Add(overlay);
-            }
+            //    layerDining.Add(overlay);
+            //}
 
-            TheMap.Layers.Add(layerDining);
+            //TheMap.Layers.Add(layerDining);
         }
 
         private void School_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -225,7 +225,7 @@ namespace WestervilleWP8
             TheMap.Layers.Clear();
             Education_Box.Fill = original;
             Recreation_Box.Fill = original;
-            Dining_Box.Fill = original;
+            //Dining_Box.Fill = original;
         }
     }
 }
