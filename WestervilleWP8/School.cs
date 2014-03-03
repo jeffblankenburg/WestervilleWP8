@@ -18,6 +18,7 @@ namespace WestervilleWP8
         public override Grid GetPushpin(string color, SolidColorBrush brush)
         {
             Grid g = new Grid();
+            g.DataContext = this;
             RowDefinition rd = new RowDefinition { Height=new GridLength(75) };
             ColumnDefinition cd1 = new ColumnDefinition { Width = new GridLength(50) };
             ColumnDefinition cd2 = new ColumnDefinition { Width = new GridLength(100) };
@@ -29,7 +30,7 @@ namespace WestervilleWP8
             image.Width = 40;
             image.Height = 40;
             g.Tap += Grid_Tap;
-            Uri uri = new Uri("Assets/Icons/school_" + color + ".png", UriKind.Relative);
+            Uri uri = new Uri("Assets/Icons/" + IconName + "_" + color + ".png", UriKind.Relative);
             ImageSource imageSource = new BitmapImage(uri);
             image.Source = imageSource;
             g.Children.Add(image);

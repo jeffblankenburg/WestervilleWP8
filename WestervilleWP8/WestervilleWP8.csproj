@@ -112,6 +112,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="POI.cs" />
+    <Compile Include="POIDetail.xaml.cs">
+      <DependentUpon>POIDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecreationItem.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
@@ -142,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="POIDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
@@ -161,25 +168,93 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Icons\baseballfield_black.png" />
+    <Content Include="Assets\Icons\baseballfield_color.png" />
+    <Content Include="Assets\Icons\baseballfield_white.png" />
     <Content Include="Assets\Icons\calendar_black.png" />
     <Content Include="Assets\Icons\calendar_color.png" />
     <Content Include="Assets\Icons\calendar_white.png" />
     <Content Include="Assets\Icons\dog_black.png" />
+    <Content Include="Assets\Icons\dog_color.png" />
     <Content Include="Assets\Icons\dog_white.png" />
     <Content Include="Assets\Icons\map_black.png" />
     <Content Include="Assets\Icons\map_color.png" />
     <Content Include="Assets\Icons\map_white.png" />
     <Content Include="Assets\Icons\park_black.png" />
+    <Content Include="Assets\Icons\park_color.png" />
     <Content Include="Assets\Icons\park_white.png" />
     <Content Include="Assets\Icons\running_black.png" />
     <Content Include="Assets\Icons\running_white.png" />
     <Content Include="Assets\Icons\school_black.png" />
+    <Content Include="Assets\Icons\school_color.png" />
     <Content Include="Assets\Icons\school_white.png" />
     <Content Include="Assets\Icons\silverware_black.png" />
+    <Content Include="Assets\Icons\silverware_color.png" />
     <Content Include="Assets\Icons\silverware_white.png" />
+    <Content Include="Assets\Icons\soccerball_black.png" />
+    <Content Include="Assets\Icons\soccerball_color.png" />
+    <Content Include="Assets\Icons\soccerball_white.png" />
     <Content Include="Assets\Icons\swim_black.png" />
+    <Content Include="Assets\Icons\swim_color.png" />
     <Content Include="Assets\Icons\swim_white.png" />
+    <Content Include="Assets\Icons\tennis_black.png" />
+    <Content Include="Assets\Icons\tennis_color.png" />
+    <Content Include="Assets\Icons\tennis_white.png" />
+    <Content Include="Assets\Icons\wetland_black.png" />
+    <Content Include="Assets\Icons\wetland_color.png" />
+    <Content Include="Assets\Icons\wetland_white.png" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\Recreation\alumcreekparknorth.jpg" />
+    <Content Include="Assets\Recreation\alumcreekparksouth.jpg" />
+    <Content Include="Assets\Recreation\astronautgrovepark.jpg" />
+    <Content Include="Assets\Recreation\benhanbypark.jpg" />
+    <Content Include="Assets\Recreation\bicentennialpark.jpg" />
+    <Content Include="Assets\Recreation\boyernaturepreserve.jpg" />
+    <Content Include="Assets\Recreation\brooksedgebarkpark.jpg" />
+    <Content Include="Assets\Recreation\collegeknollwetlands.jpg" />
+    <Content Include="Assets\Recreation\communitytenniscomplex.jpg" />
+    <Content Include="Assets\Recreation\electricminipark.jpg" />
+    <Content Include="Assets\Recreation\firstresponderspark.jpg" />
+    <Content Include="Assets\Recreation\hanbypark.jpg" />
+    <Content Include="Assets\Recreation\hannahmaynepark.jpg" />
+    <Content Include="Assets\Recreation\heritagepark.jpg" />
+    <Content Include="Assets\Recreation\highlands.jpg" />
+    <Content Include="Assets\Recreation\highlandsparkaquaticcenter.jpg" />
+    <Content Include="Assets\Recreation\hoffwoodspark.jpg" />
+    <Content Include="Assets\Recreation\hubervillagepark.jpg" />
+    <Content Include="Assets\Recreation\kiwanispicnicpark.jpg" />
+    <Content Include="Assets\Recreation\marinerscovewetland.jpg" />
+    <Content Include="Assets\Recreation\millstonecreekpark.jpg" />
+    <Content Include="Assets\Recreation\oldetownpark.jpg" />
+    <Content Include="Assets\Recreation\otterbeinlake.jpg" />
+    <Content Include="Assets\Recreation\paulmetzgerpark.jpg" />
+    <Content Include="Assets\Recreation\springgrovenorthpark.jpg" />
+    <Content Include="Assets\Recreation\towerspark.jpg" />
+    <Content Include="Assets\Recreation\uptownrotarypark.jpg" />
+    <Content Include="Assets\Recreation\walnutridgepark.jpg" />
+    <Content Include="Assets\Recreation\westervillecommunitycenter.jpg" />
+    <Content Include="Assets\Recreation\westervillesportscomplex.jpg" />
+    <Content Include="Assets\Schools\ele_alcott.jpg" />
+    <Content Include="Assets\Schools\ele_annehurst.jpg" />
+    <Content Include="Assets\Schools\ele_cherrington.jpg" />
+    <Content Include="Assets\Schools\ele_emerson.jpg" />
+    <Content Include="Assets\Schools\ele_fouse.jpg" />
+    <Content Include="Assets\Schools\ele_hanby.jpg" />
+    <Content Include="Assets\Schools\ele_hawthorne.jpg" />
+    <Content Include="Assets\Schools\ele_huberridge.jpg" />
+    <Content Include="Assets\Schools\ele_marktwain.jpg" />
+    <Content Include="Assets\Schools\ele_mcvay.jpg" />
+    <Content Include="Assets\Schools\ele_pointview.jpg" />
+    <Content Include="Assets\Schools\ele_robertfrost.jpg" />
+    <Content Include="Assets\Schools\ele_whittier.jpg" />
+    <Content Include="Assets\Schools\ele_wilder.jpg" />
+    <Content Include="Assets\Schools\hs_central.jpg" />
+    <Content Include="Assets\Schools\hs_north.jpg" />
+    <Content Include="Assets\Schools\hs_south.jpg" />
+    <Content Include="Assets\Schools\ms_blendon.jpg" />
+    <Content Include="Assets\Schools\ms_genoa.jpg" />
+    <Content Include="Assets\Schools\ms_heritage.jpg" />
+    <Content Include="Assets\Schools\ms_walnutsprings.jpg" />
     <Content Include="Assets\Schools\wcsoh.JPG" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
